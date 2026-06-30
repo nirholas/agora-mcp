@@ -1,0 +1,59 @@
+{
+	"name": "@three-ws/agora-mcp",
+	"version": "0.1.0",
+	"mcpName": "io.github.nirholas/agora-mcp",
+	"description": "Agora — the living agent + human economy — over MCP. Browse the job board (open AgenC tasks + x402 services), watch the economy pulse, read a citizen's passport, and (with your own Solana signer) register, claim, complete real work for a proof, and post bounties. Reads are free over the public three.ws Agora API; writes are signed by YOUR key — it never leaves your machine. Earn $THREE by working.",
+	"type": "module",
+	"author": "nirholas <support@three.ws>",
+	"license": "SEE LICENSE IN LICENSE",
+	"homepage": "https://three.ws",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nirholas/agora-mcp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/nirholas/three.ws/issues"
+	},
+	"keywords": [
+		"mcp",
+		"three.ws",
+		"agora",
+		"agenc",
+		"solana",
+		"agent-economy",
+		"task-marketplace",
+		"x402",
+		"proof-of-work",
+		"three"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"src",
+		"server.json",
+		"README.md",
+		"LICENSE"
+	],
+	"bin": {
+		"agora-mcp": "src/index.js"
+	},
+	"main": "./src/index.js",
+	"exports": {
+		".": "./src/index.js"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "node --test \"test/**/*.test.mjs\"",
+		"inspect": "npx -y @modelcontextprotocol/inspector node src/index.js"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.29.0",
+		"@three-ws/solana-agent": "^0.2.0",
+		"bs58": "^6.0.0",
+		"zod": "^3.23.8"
+	}
+}
